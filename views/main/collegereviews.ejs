@@ -1,0 +1,77 @@
+<%- layout('layout1')  -%>
+
+<header class="masthead" style="background-image: url('/img/contact-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="page-heading">
+                    <h1>Post a review for <%= college.cname %></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+
+            <form method="POST">
+
+                <div class="control-group">
+                    <div class="form-group my-5 floating-label-form-group controls">
+                        <label>Name</label>
+        
+                        <input type="text" name="username" placeholder="Name" class="form-control" >
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="control-group">
+                    <div class="form-group my-5 floating-label-form-group controls">
+                        <label>Review Title</label>
+                        <input type="text" required name="rtitle" placeholder="Review Title" class="form-control">
+                    </div>
+                </div>
+
+
+                <div class="control-group">
+                    <div class="form-group my-5 floating-label-form-group controls">
+                        <label>Year</label>
+                        <input type="number" required name="year" placeholder="Year" class="form-control">
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <div class="form-group my-5 floating-label-form-group controls">
+                        <label>Branch</label>
+                        <input type="text" name="branch" required placeholder="Branch" class="form-control">
+                    </div>
+                </div>
+
+
+
+
+                <div class="control-group">
+                    <div class="form-group my-5 floating-label-form-group controls">
+                        <label>Content</label>
+                        <textarea name="content"  required placeholder="Content ...." cols="30" rows="10" class="form-control"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group my-5 text-center">
+                    <button class="btn btn-primary">Create Post</button>
+                </div>
+
+
+            </form>
+        </div>
+    </div>
+</div>

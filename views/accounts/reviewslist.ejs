@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <title>College Finder</title>
+    <link href="/css/1.css" rel="stylesheet">
+    <script src="/js/1.js"></script>
+    <link href="/css/1.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <center>
+        <h1> List of College Reviews </h1>
+        <h2><h2>
+    </center>
+
+
+    <% if (msg.length > 0) { %>
+    <div class="alert alert-success alert-dismissible">
+        <button type="button" class="close" data-dismmiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <%= msg %>
+    </div>
+    <% } %>
+
+    <div class="container">
+        <div class="row">
+            <table class="table table-hover table-responsive">
+                <thead>
+                    <tr>
+                        <th>SNo.</th>
+                        <th>College Name</th>
+                        <th>User Name</th>
+                        <th>Content</th>
+                        <th>Add</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <% for (var i = 0;i < creviews.length; i++) { %>
+
+                    <tr id="d1">
+                        <td>
+                            <%= i+1 %>
+                        </td>
+                        <td>
+                            <%= creviews[i].collegename %>
+                        </td>
+                        <td>
+                            <%= creviews[i].username%>
+                        </td>
+                        <td>
+                            <%= creviews[i].rtitle%>
+                        </td>
+
+                        <td><button type="button" data-toggle="modal" data-target="#edit" data-uid="1" class="update btn btn-warning btn-sm"
+                                onclick=" window.location.href = '/clglistap/<%=creviews[i]._id%>/<%=creviews[i].collegename%> ';">
+                        
+                        
+                                <span class="glyphicon glyphicon-ok"></span></button></td>
+
+
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-danger btn-sm"
+                                onclick=" window.location.href = '/clglistrp/<%=creviews[i]._id %>';">
+
+
+                                <span class="glyphicon glyphicon-remove"></span></button></td>
+                    </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+  
+</body>
+
+</html>

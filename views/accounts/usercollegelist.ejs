@@ -1,0 +1,56 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <title>College Finder</title>
+    <link href="/css/1.css" rel="stylesheet">
+    <script src="/js/1.js"></script>
+    <link href="/css/1.css" rel="stylesheet">
+
+</head>
+<body>
+    <center>
+        <h1> List of Colleges </h1>
+        <h2>Click here to post a review</h2>
+    </center>
+
+    <div class="container">
+        <div class="row">
+            <table class="table table-hover table-responsive">
+                <thead>
+                    <tr>
+                        <th>SNo.</th>
+                        <th>College Name</th>
+                        <th>Post</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <% for (var i = 0;i < college.length; i++) {
+                        if (college[i].flag==1) { %>
+
+                    <tr id="d1">
+                        <td>
+                            <%= i+1 %>
+                        </td>
+                        <td>
+                            <%= college[i].cname %>
+                        </td>
+                        <td><button type="button" data-toggle="modal" data-target="#edit" data-uid="1" class="update btn btn-warning btn-sm"
+                                onclick=" window.location.href = '/collegereviews/<%=college[i].cname%> ';">
+                            <span class="glyphicon glyphicon-ok"></span></button></td>
+                        
+
+                    </tr>
+                    <% } %>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

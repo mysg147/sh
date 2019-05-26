@@ -1,0 +1,63 @@
+<% layout('layout1') %>
+
+<header class="masthead" style="background-image: url('img/home-bg1.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="site-heading">
+                    <h1>College Finder</h1>
+                    <span class="subheading">Get into your dream college</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Main Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+            <% for (var i=0;i < creviews.length;i++) { 
+                if(creviews[i].flag ==1) { %>
+                        <div class="post-preview">
+                                <a>
+                                <b class="post-title">
+                                    <a href="/:creviews._id"><%= creviews[i].rtitle %></a>
+                                </b>
+                                </a>
+                                <p style ="padding: 0px 0px 0px 0px"><%= creviews[i].content %>
+
+                                <p class="post-meta">Posted by
+                                <b> <%= creviews[i].username %></b>
+                                    on <%= creviews[i].createdAt.toDateString() %> |
+                                        <%= creviews[i].branch %>
+                                        <%= creviews[i].collegename %>
+                                        - Batch of <%= creviews[i].year %>
+                                        
+                                        
+                            </p>
+
+                        </div> <% } %>
+
+
+                        <% } %>
+                        <div class="btn-group btn-group-sm">
+                            <button type="button" class="btn btn-white">
+                                <span class="text-success">
+                                    <i class="material-icons">check</i>
+                                </span> Like </button>
+                            <button type="button" class="btn btn-white">
+                                <span class="text-danger">
+                                    <i class="material-icons">clear</i>
+                                </span> Dislike </button>
+                        
+                        </div>
+            <!-- Pager -->
+            <div class="clearfix">
+                <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+            </div>
+        </div>
+
+    </div>
+</div>

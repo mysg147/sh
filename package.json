@@ -1,0 +1,33 @@
+{
+  "name": "plm",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.6.2",
+    "bcrypt-nodejs": "0.0.3",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "connect-mongo": "^2.0.3",
+    "cookie-parser": "^1.4.4",
+    "ejs": "^2.6.1",
+    "ejs-mate": "^3.0.0",
+    "express": "^4.16.4",
+    "express-flash": "0.0.2",
+    "express-session": "^1.16.1",
+    "mongoosastic": "^4.4.1",
+    "mongoose": "^5.5.8",
+    "morgan": "^1.9.1",
+    "multer": "^1.4.1",
+    "passport": "^0.4.0",
+    "passport-custom": "^1.0.5",
+    "passport-local": "^1.0.0",
+    "serve-favicon": "^2.5.0"
+  },
+  "description": ""
+}
